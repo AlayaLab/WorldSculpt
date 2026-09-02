@@ -1,0 +1,69 @@
+WorldSculpt
+Copyright 2026 Alaya Lab
+
+This product includes software developed at Alaya Lab.
+
+Licensed under the Apache License, Version 2.0 (see LICENSE Part 1). Portions of
+this repository are third-party code under their own licenses, listed below. The
+component-to-licence map and the full licence texts are in LICENSE.
+
+-------------------------------------------------------------------------------
+Third-party source code redistributed in this repository
+-------------------------------------------------------------------------------
+
+pixal3d/
+    Vendored from Pixal3D — https://github.com/TencentARC/Pixal3D
+    Copyright (c) 2026 Tencent
+    MIT License (see pixal3d/LICENSE and LICENSE Part 2)
+    NOT covered by this project's Apache-2.0 grant.
+
+    Pixal3D's own NOTICE declares the following upstream components, whose terms
+    also apply to the vendored copy:
+      - TRELLIS.2      Copyright Microsoft Corporation          MIT
+      - dinov2         Copyright the dinov2 authors             Apache-2.0
+      - Direct3D-S2    Copyright DreamTech                      MIT
+      - MoGe           Copyright Microsoft Corporation          MIT
+
+-------------------------------------------------------------------------------
+Third-party model weights — NOT redistributed here
+-------------------------------------------------------------------------------
+
+These are downloaded by the user at setup or run time and remain subject to their
+own terms. This project grants no rights in them.
+
+Pixal3D base checkpoints
+    https://huggingface.co/TencentARC/Pixal3D
+    MIT License, Copyright (c) 2026 Tencent
+
+DINOv3 ViT-L/16
+    https://huggingface.co/facebook/dinov3-vitl16-pretrain-lvd1689m
+    Meta DINOv3 License — NEITHER Apache-2.0 NOR MIT, and gated: the user must
+    accept Meta's terms before download. Used as a frozen feature extractor.
+
+BiRefNet
+    https://huggingface.co/ZhengPeng7/BiRefNet
+    Upstream's own license. Reached only through the vendored upstream
+    single-image path, which the released scene pipeline does not use.
+
+-------------------------------------------------------------------------------
+Runtime dependencies — NOT vendored
+-------------------------------------------------------------------------------
+
+Installed from PyPI or release wheels; each remains under its own license. No
+source from these packages is copied into this repository.
+
+    MIT          natten (Copyright 2022-2025 Ali Hassani), utils3d, flex_gemm,
+                 cumesh, o_voxel, moge (Microsoft), trimesh
+    Apache-2.0   transformers, peft, diffusers, safetensors, timm, kornia
+    BSD-3-Clause torch
+
+-------------------------------------------------------------------------------
+Datasets
+-------------------------------------------------------------------------------
+
+The UE-MeshyScene and Marble datasets are distributed separately (Hugging Face),
+not in this repository. They contain RGB images and annotations — instance masks,
+3D boxes, camera poses. No 3D geometry, textures, or other asset files are included. No additional rights in the
+datasets are granted.
+
+No GPL, AGPL, or LGPL licensed code is included in this repository.
