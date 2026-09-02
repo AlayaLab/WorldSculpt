@@ -9,7 +9,7 @@ from Grounded Videos</h1>
 <!-- <h3>arXiv 2026</h3> -->
 
 <div align="center">
-    <a href='https://myniuuu.github.io/' target='_blank'>Muyao Niu</a> <sup>1,2</sup> &nbsp;
+    <a href='https://myniuuu.github.io/' target='_blank'>Muyao Niu</a><sup>1,2</sup> &nbsp;
     <a href='https://kakituken.github.io/home' target='_blank'>Jixuan He</a><sup>1</sup> &nbsp;
     <a href='https://auroraryan0301.github.io/' target='_blank'>Ruihan Yu</a><sup>1</sup> &nbsp;
     <a href='https://scholar.google.com/citations?user=CbWYuIEAAAAJ' target='_blank'>Lian Fu</a><sup>1</sup> &nbsp;
@@ -49,7 +49,7 @@ from Grounded Videos</h1>
 <h2>TL;DR</h2>
 
 - **Single-object prior for complex compositional scenes.** We demonstrate that a single-object generative prior can be leveraged for compositional meshification of very complex scenes with hundreds of objects.
-- **From a single-view model to a multi-view one.** We finetune Pixal3D to consume multiple views.
+- **From a single-view model to a multi-view one.** We finetune Pixal3D to consume occluded multiple-view input.
 - **Benchmark.** We release the UE-MeshyScene dataset with per-frame, per-instance annotations.
 - **Application to Marble.** The same pipeline turns a Marble 3DGS world into object-level compositional meshes.
 
