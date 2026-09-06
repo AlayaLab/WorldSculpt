@@ -55,11 +55,12 @@ def remesh_geometry_glb(vertices, faces, grid_size, decimation_target=100_000,
     """Geometry-only counterpart of `o_voxel.postprocess.to_glb(remesh=True)`.
 
     to_glb cannot be called with --no_tex: `attr_volume` / `coords` / `attr_layout`
-    are required args and only Stage 3 (texture) produces them. So reproduce its
-    GEOMETRY stages verbatim — same calls, same order, same constants —
-        fill_holes(3e-2) -> remesh_narrow_band_dc(band, project_back) -> simplify
-    — and skip only the UV-unwrap + texture-bake tail, which does not touch
-    geometry. The exported surface is then identical to the textured path's.
+    are required args and only Stage 3 (texture) produces them. Apply a non-manifold
+    repair pre-pass, then reuse the official geometry calls and constants:
+        repair_non_manifold_edges -> official fill_holes(3e-2)
+        -> remesh_narrow_band_dc(band, project_back) -> simplify
+    Then perform the cleanup and normal generation that official UV unwrapping
+    starts with, while omitting UV-chart seam duplication and texture baking.
 
     Frame: to_glb ends with an axis swap (x,y,z) -> (x, z, -y) (postprocess.py,
     "Swap Y and Z axes, invert Y"). We apply the SAME swap, so the caller's
@@ -72,6 +73,7 @@ def remesh_geometry_glb(vertices, faces, grid_size, decimation_target=100_000,
 
     m = cumesh.CuMesh()
     m.init(V, F)
+    m.repair_non_manifold_edges()
     m.fill_holes(max_hole_perimeter=3e-2)          # to_glb does this before both branches
     V, F = m.read()
 
@@ -85,11 +87,17 @@ def remesh_geometry_glb(vertices, faces, grid_size, decimation_target=100_000,
         resolution=int(grid_size), band=band, project_back=project_back,
         verbose=False, bvh=cumesh.cuBVH(V, F)))
     m2.simplify(decimation_target)
+    m2.remove_degenerate_faces()
+    m2.compute_vertex_normals()
     Vo, Fo = m2.read()
+    No = m2.read_vertex_normals()
 
     v = Vo.detach().cpu().numpy().astype(np.float64)
+    n = No.detach().cpu().numpy().astype(np.float64)
     v[:, 1], v[:, 2] = v[:, 2].copy(), -v[:, 1].copy()     # match to_glb's axis swap
-    return trimesh.Trimesh(v, Fo.detach().cpu().numpy(), process=False)
+    n[:, 1], n[:, 2] = n[:, 2].copy(), -n[:, 1].copy()
+    return trimesh.Trimesh(v, Fo.detach().cpu().numpy(),
+                           vertex_normals=n, process=False)
 
 
 def K_image_to_norm(K_image_pix, image_size_px):
