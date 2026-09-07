@@ -19,7 +19,7 @@ from Grounded Videos</h1>
 </div>
 <div align="center">
     <a href='https://yongtao.me/' target='_blank'>Yongtao Ge</a><sup>1</sup> &nbsp; 
-    <a href='https://scholar.google.com/citations?user=JD-5DKcAAAAJ' target='_blank'>Yinqiang Zheng</a><sup>1</sup> &nbsp; 
+    <a href='https://scholar.google.com/citations?user=JD-5DKcAAAAJ' target='_blank'>Yinqiang Zheng</a><sup>2</sup> &nbsp; 
     <a href='https://kpzhang93.github.io/' target='_blank'>Kaipeng Zhang</a><sup>1,✉</sup> &nbsp; 
     <a href='https://lightchaserx.github.io/' target='_blank'>Zhixiang Wang</a><sup>1,✉</sup> &nbsp; 
 </div>
