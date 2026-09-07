@@ -31,7 +31,7 @@ from Grounded Videos</h1>
 
 <div align="center">
   <a href="https://alaya-lab.github.io/WorldSculpt"><img src=https://img.shields.io/badge/Project%20Page-333399.svg?logo=googlehome height=22px></a>
-  <a href=""><img src=https://img.shields.io/badge/Arxiv-b5212f.svg?logo=arxiv height=22px></a>
+  <a href="https://arxiv.org/abs/2609.05416"><img src=https://img.shields.io/badge/Arxiv-b5212f.svg?logo=arxiv height=22px></a>
   <a href="https://huggingface.co/AlayaLab/WorldSculpt"><img src=https://img.shields.io/badge/%F0%9F%A4%97%20Models-d96902.svg height=22px></a>
   <a href="https://huggingface.co/datasets/AlayaLab/Worldsculpt_data"><img src=https://img.shields.io/badge/%F0%9F%A4%97%20Benchmark-2e7d32.svg height=22px></a>
   <a href="https://alaya-lab.github.io/WorldSculpt/#video"><img src=https://img.shields.io/badge/%F0%9F%8E%A5%20Demo%20Video-0d9488.svg height=22px></a>
@@ -49,7 +49,7 @@ from Grounded Videos</h1>
 <h2>TL;DR</h2>
 
 - **Single-object prior for complex compositional scenes.** We demonstrate that a single-object generative prior can be leveraged for compositional meshification of very complex scenes with hundreds of objects.
-- **From a single-view model to a multi-view one.** We finetune Pixal3D to consume occluded multiple-view input.
+- **Adapting Single-Object Prior.** We finetune Pixal3D to consume occluded multiple-view input.
 - **Benchmark.** We release the UE-MeshyScene dataset with per-frame, per-instance annotations.
 - **Application to Marble.** The same pipeline turns a Marble 3DGS world into object-level compositional meshes.
 
@@ -143,6 +143,15 @@ If you find this work useful, please cite:
 
 ```bibtex
 
+@misc{niu2026worldsculptgeneratingcompositionalworlds,
+      title={WorldSculpt: Generating Compositional Worlds from Grounded Videos}, 
+      author={Muyao Niu and Jixuan He and Ruihan Yu and Lian Fu and Yonghao Yu and Zheng-Hui Huang and Yifan Zhan and Fengbo Lan and Yongtao Ge and Yinqiang Zheng and Kaipeng Zhang and Zhixiang Wang},
+      year={2026},
+      eprint={2609.05416},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2609.05416}, 
+}
 
 ```
 
