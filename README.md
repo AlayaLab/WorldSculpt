@@ -13,6 +13,7 @@ from Grounded Videos</h1>
     <a href='https://kakituken.github.io/home' target='_blank'>Jixuan He</a><sup>1</sup> &nbsp;
     <a href='https://auroraryan0301.github.io/' target='_blank'>Ruihan Yu</a><sup>1</sup> &nbsp;
     <a href='https://scholar.google.com/citations?user=CbWYuIEAAAAJ' target='_blank'>Lian Fu</a><sup>1</sup> &nbsp;
+    <a href='https://scholar.google.com/citations?user=lwuwuAYAAAAJ' target='_blank'>Yonghao Yu</a><sup>1</sup> &nbsp;
     <a href='https://brian90709.github.io/' target='_blank'>Zheng-Hui Huang</a><sup>1</sup> &nbsp;
     <a href='https://yifever20002.github.io/' target='_blank'>Yifan Zhan</a><sup>1</sup> &nbsp;
     <a href='https://openreview.net/profile?id=%7EFengbo_Lan1' target='_blank'>Fengbo Lan</a><sup>1</sup> &nbsp;
