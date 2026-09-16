@@ -34,9 +34,10 @@ from Grounded Videos</h1>
   <a href="https://alaya-lab.github.io/WorldSculpt"><img src=https://img.shields.io/badge/Project%20Page-333399.svg?logo=googlehome height=22px></a>
   <a href="https://arxiv.org/abs/2609.05416"><img src=https://img.shields.io/badge/Arxiv-b5212f.svg?logo=arxiv height=22px></a>
   <a href="https://huggingface.co/AlayaLab/WorldSculpt"><img src=https://img.shields.io/badge/%F0%9F%A4%97%20Models-d96902.svg height=22px></a>
+  <a href="https://github.com/jtydhr88/ComfyUI-WorldSculpt"><img src="https://img.shields.io/badge/ComfyUI-WorldSculpt-6C63FF.svg?logo=github" height=22px></a>
   <a href="https://huggingface.co/datasets/AlayaLab/Worldsculpt_data"><img src=https://img.shields.io/badge/%F0%9F%A4%97%20Benchmark-2e7d32.svg height=22px></a>
   <a href="https://alaya-lab.github.io/WorldSculpt/#video"><img src=https://img.shields.io/badge/%F0%9F%8E%A5%20Demo%20Video-0d9488.svg height=22px></a>
-   <a href="LICENSE"><img src=https://img.shields.io/badge/%E2%9A%96%EF%B8%8F%20Apache%202.0-blue.svg height=22px></a>
+  <a href="LICENSE"><img src=https://img.shields.io/badge/%E2%9A%96%EF%B8%8F%20Apache%202.0-blue.svg height=22px></a>
 </div>
 
 <div align="center">
@@ -44,6 +45,14 @@ from Grounded Videos</h1>
 </div>
 
 <div align="center">Given RGB images with instance masks and 3D boxes, <strong>WorldSculpt</strong> produces a compositional mesh representation for very complex scenes consisting of hundreds of individual objects.</div>
+
+
+## ✨ News
+- **Sep 14, 2026**: 🔥🔥 [ComfyUI integration](https://github.com/jtydhr88/ComfyUI-WorldSculpt) is now available 🎨. Many thanks to [Terry Jia (@jtydhr88)](https://github.com/jtydhr88) for the wonderful implementation!
+- **Sep 2, 2026**: 🔥🔥 Released inference codes 📟, checkpoints 🤗, arXiv 📚, and project page 🏠.
+
+
+
 
 <!-- **TL;DR — What We Do** -->
 
@@ -62,16 +71,12 @@ from Grounded Videos</h1>
 </div>
 
 
-## ✨ News
-
-- **Sep 2026**: Release inference codes 📟, checkpoint 🤗, arXiv 📚, and project page 🏠.
-
 
 ## 🚀 Getting Started
 
-### Installation
+### ⚙️ Installation
 
-#### Step 1: Following TRELLIS.2 Installation
+#### Step 1: Follow the TRELLIS.2 Installation Guide
 
 Please first follow the installation guide of [TRELLIS.2](https://github.com/microsoft/TRELLIS.2) to set up the base environment.
 
@@ -113,7 +118,7 @@ tar xvf Marble.tar.gz
 cd ../..
 ```
 
-#### Step 5 🚀🚀: Running Inference
+### 🧠 Running Inference
 
 Every option is passed explicitly — the script has no defaults, so a run is fully
 described by its own command line. Step 4 extracts each dataset into its own
@@ -134,9 +139,22 @@ RENDER=1 FACE_BUDGET=1000000 GPU=0 \
 ./inference.sh marble_serene_living_room_countryside_view
 ```
 
+
+
+## 🎨 ComfyUI Integration
+
+A community ComfyUI implementation of WorldSculpt is available at [ComfyUI-WorldSculpt](https://github.com/jtydhr88/ComfyUI-WorldSculpt), developed by [Terry Jia (@jtydhr88)](https://github.com/jtydhr88).
+
+It provides node-based workflows for running WorldSculpt within ComfyUI. Please refer to the repository for installation instructions, example workflows, and the latest usage details.
+
+
+
+
 ## 🙏 Acknowledgements
 
-We thank [Pixal3D](https://huggingface.co/TencentARC/Pixal3D), [TRELLIS.2](https://github.com/microsoft/TRELLIS.2), and [DINOv3](https://github.com/facebookresearch/dinov3) for their wonderful work and open-source repositories.
+We thank [Pixal3D](https://huggingface.co/TencentARC/Pixal3D), [TRELLIS.2](https://github.com/microsoft/TRELLIS.2), and [DINOv3](https://github.com/facebookresearch/dinov3) for their wonderful work and open-source repositories. 
+
+We also thank [Terry Jia](https://github.com/jtydhr88) for developing and open-sourcing the community [ComfyUI integration](https://github.com/jtydhr88/ComfyUI-WorldSculpt) for WorldSculpt.
 
 ## 📖 Citation
 
